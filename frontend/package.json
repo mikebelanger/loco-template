@@ -1,0 +1,22 @@
+{
+    "name": "frontend",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "rsbuild dev --open",
+        "build": "rsbuild build",
+        "lint": "biome check src/",
+        "preview": "rsbuild preview"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1",
+        "@rsbuild/core": "^1.0",
+        "typescript": "^5"
+    },
+    "dependencies": {
+        "@rsbuild/plugin-sass": "^1.0.2",
+        "@rsbuild/plugin-yaml": "^1.0.2",
+        "bulma": "^1.0.2"
+    }
+}

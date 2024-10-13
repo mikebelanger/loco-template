@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        <script src="./index.js"></script>
+        {% block head %} {% endblock head %}
+    </head>
+
+    <body class="prose p-10">
+        <div id="content">{% block content %} {% endblock content %}</div>
+
+        {% block js %} {% endblock js %}
+        <movie-view endpoint="/movies"></movie-view>
+    </body>
+</html>

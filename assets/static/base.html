@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock title %}</title>
+        <script src="./index.js"></script>
+        {% block head %} {% endblock head %}
+    </head>
+
+    <body class="prose p-10">
+        <div id="content">{% block content %} {% endblock content %}</div>
+
+        {% block js %} {% endblock js %}
+        <movies id="movies-list" endpoint="/movies"></movies>
+    </body>
+    <script>
+        const movies_list = document.getElementById("movies-list");
+        movies_list.dispatch(new Event("get-all"));
+    </script>
+</html>

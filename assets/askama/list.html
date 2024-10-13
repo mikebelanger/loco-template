@@ -1,0 +1,23 @@
+<table id="movies-list" class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Star</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            {%match item.name %} {% when Some(val) %}
+            <td>{{ val }}</td>
+            {% when None %}
+            <td></td>
+            {% endmatch %} {%match item.star %} {% when Some(val) %}
+            <td>{{ val }}</td>
+            {% when None %}
+            <td>Unavailable</td>
+            {% endmatch %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

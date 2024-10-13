@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+Create movies
+{% endblock title %}
+
+{% block content %}
+<h1>Create new movies</h1>
+<div class="mb-10">
+    <form action="/movies" method="post">
+        <div class="mb-5">
+        <div>
+            <label>name</label>
+            <br />
+            <input id="name" name="name" type="text" value=""/>
+            </div>
+        <div>
+            <label>star</label>
+            <br />
+            <input id="star" name="star" type="number" required></input>
+            </div>
+        </div>
+        <div>
+            <button class=" text-xs py-3 px-6 rounded-lg bg-gray-900 text-white" type="submit">Submit</button>
+        </div>
+    </form>
+<br />
+<a href="/movies">Back to movies</a>
+</div>
+{% endblock content %}
